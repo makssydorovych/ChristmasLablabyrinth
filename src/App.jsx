@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-import AppRouter from './AppRouter';
+import React from 'react';
+import {Router} from "./router.jsx";
+import {Provider} from "react-redux";
+import store from './services/store.js'
 
 const App = () => {
-    const [playerNames, setPlayerNames] = useState([]);
-    const [difficulty, setDifficulty] = useState('easy');
-
-    const handleNamesSelected = (names) => setPlayerNames(names);
-    const handleDifficultySelected = (difficulty) => setDifficulty(difficulty);
 
     return (
-        <AppRouter
-            onNamesSelected={handleNamesSelected}
-            onDifficultySelected={handleDifficultySelected}
-        />
+        <Provider store={store}>
+        <Router />
+        </Provider>
     );
 };
 
