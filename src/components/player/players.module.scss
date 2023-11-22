@@ -1,0 +1,34 @@
+/* player.module.scss */
+
+.player {
+  /* Common styles for players */
+  opacity: 0.5;
+}
+
+.player-1 {
+  background-color: var(--color-player-1);
+}
+
+.player-2 {
+  background-color: var(--color-player-2);
+}
+
+.player-3 {
+  background-color: var(--color-player-3);
+}
+
+.player-4 {
+  background-color: var(--color-player-4);
+}
+
+.player-5 {
+  background-color: var(--color-player-5);
+}
+
+.player-6 {
+  background-color: var(--color-player-6);
+}
+
+.active {
+  opacity: 1;
+}

@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,5 +35,10 @@ p {
 body {
   margin: 0;
   padding: 0;
-
+  --color-player-1: #e70a44;
+  --color-player-2: #042bf5;
+  --color-player-3: #07e50b;
+  --color-player-4: #f5e005;
+  --color-player-5: #5e0404;
+  --color-player-6: #424242;
 }

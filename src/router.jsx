@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import OptionsScreen from "./pages/optionsScrees";
-import StartScreen from "./pages/startScreen";
+import OptionsScreen from "./pages/options-screes.jsx";
+import StartScreen from "./pages/start-screen.jsx";
 import Layout from "./pages/layout.jsx";
-import GameBoard from "./pages/gameBoard/GameBoards.jsx";
+import GameBoard from "./pages/gameBoard/game-board.jsx";
 
 const publicRoutes = [
     {
