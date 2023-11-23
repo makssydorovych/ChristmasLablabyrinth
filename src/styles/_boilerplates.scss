@@ -3,6 +3,8 @@ html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -35,6 +37,13 @@ p {
 body {
   margin: 0;
   padding: 0;
+  background: url("../assets/images/hero-image.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+
+  -webkit-background-size: cover; /* For Safari 3.1 to 6.0 */
+  -moz-background-size: cover; /* For Firefox 3.6 to 15 */
+  -o-background-size: cover; /* For Opera 10.5 to 12.0 */
   --color-player-1: #e70a44;
   --color-player-2: #042bf5;
   --color-player-3: #07e50b;
