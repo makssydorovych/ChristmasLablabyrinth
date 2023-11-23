@@ -10,24 +10,21 @@ const OptionsScreen = () => {
   const dispatch = useDispatch();
   const players = useSelector((state) => state.game.players);
   const navigate = useNavigate();
-
   const handleAddPlayer = () => {
     if (playerName.trim()) {
       dispatch(addPlayer({ name: playerName }));
       setPlayerName("");
     }
   };
-
   const handleStartGame = () => {
     if (players.length > 0) {
-      // dispatch(updatePlayer({ playerIndex: 0, isActive: true }));
       navigate("/game");
     }
   };
 
   return (
     <div className={s.optionsScreen}>
-      <Players names={players.map((player) => player.name)} />
+      <Players />
       <input
         className={s.optionsScreenInput}
         type="text"
