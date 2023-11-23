@@ -13,7 +13,7 @@ const Players = () => {
           }`}
           key={index}
         >
-          {player.name} {/* Исправлено с name на player.name */}
+          {player.name}
         </li>
       ))}
     </ol>
