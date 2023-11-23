@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {setDiceValue} from "../../services/game.slice.js";
 
 const Dice = () => {
     const players = useSelector((state) => state.game.players);
+    const diceValue = useSelector((state) => state.game.diceValue);
     const activePlayerIndex = players.findIndex(player => player.isActive);
     const activePlayer = players[activePlayerIndex];
     const [isDiceActive, setIsDiceActive] = useState(false);
-    const [diceValue, setDiceValue] = useState(1);
 
+const dispatch = useDispatch();
     useEffect(() => {
         if (activePlayer) {
             setIsDiceActive(true);
@@ -16,16 +18,16 @@ const Dice = () => {
 
     const handleRollDice = () => {
         if (isDiceActive) {
-            const newValue = Math.ceil(Math.random() * 6); // Генерация числа от 1 до 6
-            setDiceValue(newValue);
-            setIsDiceActive(false); // Деактивация кубика после броска
+            const newValue = Math.ceil(Math.random() * 6);
+            dispatch(setDiceValue(newValue)); // Обновляем значение кубика через Redux
+            setIsDiceActive(false);
         }
     };
 
     const diceColor = activePlayerIndex >= 0 ? `var(--color-player-${activePlayerIndex + 1})` : 'grey';
-
+    const displayDiceValue = typeof diceValue === 'object' ? diceValue.diceValue : diceValue;
     return (
-        <div>
+        <>
             {isDiceActive && (
                 <button
                     style={{ backgroundColor: diceColor }}
@@ -33,8 +35,8 @@ const Dice = () => {
                     Roll Dice
                 </button>
             )}
-            <p>Dice Value: {diceValue}</p>
-        </div>
+            <p>Dice Value: {displayDiceValue}</p>
+        </>
     );
 };
 

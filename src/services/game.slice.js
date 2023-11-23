@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     difficulty: 'easy',
-    players: []
+    players: [],
+    diceValue: 0,
 };
 export const gameSlice = createSlice({
     name: 'game',
@@ -31,12 +32,15 @@ export const gameSlice = createSlice({
                 state.players[playerIndex].isActive = isActive ?? state.players[playerIndex].isActive;
             }
         },
+        setDiceValue: (state, action) => {
+            state.diceValue = action.payload;
+        },
 
     },
 });
 
 
-export const { setDifficulty, addPlayer, updatePlayer } = gameSlice.actions;
+export const { setDifficulty, addPlayer, updatePlayer,setDiceValue } = gameSlice.actions;
 
 
 export default gameSlice.reducer;
