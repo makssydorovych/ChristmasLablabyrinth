@@ -3,7 +3,7 @@ import s from "./player-token.module.scss";
 
 const PlayerToken = ({ playerIndex }) => {
   const tokenClass = `${s.playerToken} ${s["player-" + (playerIndex + 1)]}`;
-  return <div className={tokenClass}>1</div>;
+  return <div className={tokenClass}></div>;
 };
 
 PlayerToken.propTypes = {
