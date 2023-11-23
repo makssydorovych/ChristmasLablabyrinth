@@ -13,6 +13,7 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 2px 2px 3px black;
+    opacity: 0.5;
   }
   .player-1 {
     background-color: var(--color-player-1);
@@ -33,9 +34,19 @@
     background-color: var(--color-player-6);
   }
   .active {
-    color: black;
-    text-shadow: 1px 1px 1px black;
-    background: white;
+    animation: pulse 1s infinite;
+    opacity: 1;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   @media screen and (max-width: 768px) { /* Typical tablet screen width */
     margin: 50px 0;
