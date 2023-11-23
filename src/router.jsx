@@ -16,7 +16,7 @@ const publicRoutes = [
         element: <OptionsScreen />,
     },
     {
-        path: '/gameBoard',
+        path: '/game',
         element: <GameBoard />,
     },
 ];
