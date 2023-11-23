@@ -1,0 +1,35 @@
+.players{
+margin-right: 100px;
+  list-style-type: none;
+  .player {
+    opacity: 0.5;
+    margin: 10px;
+
+  }
+  .player-1 {
+    background-color: var(--color-player-1);
+  }
+  .player-2 {
+    background-color: var(--color-player-2);
+  }
+  .player-3 {
+    background-color: var(--color-player-3);
+  }
+  .player-4 {
+    background-color: var(--color-player-4);
+  }
+  .player-5 {
+    background-color: var(--color-player-5);
+  }
+  .player-6 {
+    background-color: var(--color-player-6);
+  }
+  .active {
+    opacity: 1;
+    border: 1px solid red;
+  }
+  @media screen and (max-width: 768px) { /* Typical tablet screen width */
+    margin: 50px 0;
+  }
+}
+
