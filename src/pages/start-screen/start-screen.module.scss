@@ -1,0 +1,67 @@
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  margin-top: 200px;
+  .startScreenWelcome{
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    color: #fff;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+
+  }
+  .startScreenHeader{
+
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes rainbow {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+  }
+
+  .typingEffect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end), rainbow 5s ease infinite;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.1rem;
+  }
+  .startScreenButton{
+    height: 60px;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #032bfc;
+    border: 1px solid rgba(4, 43, 245, 0.71);
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #0365fc, #032bfc);
+    &:hover{
+      cursor: pointer;
+      background: rgba(4, 43, 245, 0.71);
+      border: 1px solid #032bfc;
+      transition: 0.5s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(to right, #0345ec, #031bdc);
+    }
+  }
+}

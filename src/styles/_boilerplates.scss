@@ -6,13 +6,11 @@ html {
   margin: 0;
   padding: 0;
 }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 input,
 button,
 select,
@@ -25,22 +23,18 @@ option {
   font-style: inherit;
   color: inherit;
 }
-
 a:visited {
   color: inherit;
 }
-
 p {
   margin: 0;
 }
-
 body {
   margin: 0;
   padding: 0;
   background: url("../assets/images/hero-image.jpg") no-repeat center center;
   background-size: cover;
   min-height: 100vh;
-
   -webkit-background-size: cover; /* For Safari 3.1 to 6.0 */
   -moz-background-size: cover; /* For Firefox 3.6 to 15 */
   -o-background-size: cover; /* For Opera 10.5 to 12.0 */
