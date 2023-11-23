@@ -44,4 +44,15 @@ body {
   --color-player-4: #f5e005;
   --color-player-5: #5e0404;
   --color-player-6: #424242;
+  --primary-blue: #032bfc;
+  --hover-blue: rgba(4, 43, 245, 0.71);
+  --gradient-start: #0365fc;
+  --gradient-end: #032bfc;
+  --hover-gradient-start: #0345ec;
+  --hover-gradient-end: #031bdc;
+  @keyframes twinkle {
+    0% { box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5); }
+    100% { box-shadow: 0 0 15px 3px rgba(0, 200, 0, 0.7), 0 0 15px 3px rgba(200, 0, 0, 0.7); }
+  }
+
 }

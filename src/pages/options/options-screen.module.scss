@@ -1,0 +1,52 @@
+.optionsScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  .optionsScreenButton{
+    margin: 20px;
+    border-radius: 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border: 1px solid var(--hover-blue);
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+    &:hover{
+      cursor: pointer;
+      background: var(--hover-blue);
+      border: 1px solid var(--primary-blue);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(to right, var(--hover-gradient-start), var(--hover-gradient-end));
+    }
+  }
+  .optionsScreenInput{
+    background-color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5);
+    animation: twinkle 1.5s infinite alternate;
+
+    @keyframes twinkle {
+      0% { box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5); }
+      100% { box-shadow: 0 0 15px 3px rgba(0, 200, 0, 0.7), 0 0 15px 3px rgba(200, 0, 0, 0.7); }
+    }
+    &::placeholder {
+      color: #999;
+    }
+    &:focus {
+      outline: none;
+      animation: none;
+    }
+  }
+  @media screen and (max-width: 768px) { /* Typical tablet screen width */
+    flex-direction: column;
+    padding-top: 50px;
+  }
+}
