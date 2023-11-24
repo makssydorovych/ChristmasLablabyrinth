@@ -16,6 +16,9 @@ const OptionsScreen = () => {
       dispatch(addPlayer({ name: playerName }));
       setPlayerName("");
     }
+    if (players.length === 6) {
+      alert("Maximum amount of players");
+    }
   };
   const handleStartGame = () => {
     if (players.length > 0) {
