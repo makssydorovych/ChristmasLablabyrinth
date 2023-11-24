@@ -21,6 +21,8 @@ const OptionsScreen = () => {
     if (players.length > 0) {
       dispatch(updatePlayer({ playerIndex: 0, isActive: true }));
       navigate("/game");
+    } else {
+      alert("Add players name");
     }
   };
 
@@ -43,7 +45,6 @@ const OptionsScreen = () => {
           Add Player
         </motion.button>
         <motion.button
-          disabled={players.length < 1}
           className={s.optionsScreenButton}
           onClick={handleStartGame}
           whileTap={{ scale: 0.8 }}

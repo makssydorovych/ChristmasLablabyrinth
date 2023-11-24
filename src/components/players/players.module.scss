@@ -1,6 +1,8 @@
 .players{
   list-style-type: none;
-min-height: 400px;
+  min-height: 400px;
+  width: 300px;
+ margin: 0 auto;
   .player {
     margin: 10px;
     padding: 10px;
