@@ -33,16 +33,16 @@ p {
 body {
   margin: 0;
   padding: 0;
-  background: url("../assets/images/hero-image.jpg") no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  -webkit-background-size: cover; /* For Safari 3.1 to 6.0 */
-  -moz-background-size: cover; /* For Firefox 3.6 to 15 */
-  -o-background-size: cover; /* For Opera 10.5 to 12.0 */
+
+    font-family: 'DM Serif Text', sans-serif;
+
+  //-webkit-background-size: cover; /* For Safari 3.1 to 6.0 */
+  //-moz-background-size: cover; /* For Firefox 3.6 to 15 */
+  //-o-background-size: cover; /* For Opera 10.5 to 12.0 */
   --color-player-1: #FF0000;
-  --color-player-2: #00FF00;
+  --color-player-2: #06b706;
   --color-player-3: #0000FF;
-  --color-player-4: #FFFF00;
+  --color-player-4: #5d3604;
   --color-player-5: #800080;
   --color-player-6: #FFA500;
   --primary-blue: #032bfc;
