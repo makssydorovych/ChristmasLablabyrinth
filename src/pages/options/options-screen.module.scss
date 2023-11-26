@@ -1,4 +1,6 @@
 .optionsScreen{
+
+
   .optionsScreenItems{
     display: flex;
     justify-content: center;
@@ -26,30 +28,47 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         background: linear-gradient(to right, var(--hover-gradient-start), var(--hover-gradient-end));
       }
-    }
-    .optionsScreenInput{
-      background-color: white;
-      border: none;
-      padding: 10px 15px;
-      font-size: 16px;
-      color: #333;
-      box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5);
-      animation: twinkle 1.5s infinite alternate;
-      @keyframes twinkle {
-        0% { box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5); }
-        100% { box-shadow: 0 0 15px 3px rgba(0, 200, 0, 0.7), 0 0 15px 3px rgba(200, 0, 0, 0.7); }
-      }
-      &::placeholder {
-        color: #999;
-      }
-      &:focus {
-        outline: none;
-        animation: none;
-      }
-    }
+    }.optionsScreenInputForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+           .optionsScreenInput{
+             background-color: white;
+             border: none;
+             padding: 10px 15px;
+             font-size: 16px;
+             color: #333;
+             box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5);
+             animation: twinkle 1.5s infinite alternate;
+             @keyframes twinkle {
+               0% { box-shadow: 0 0 10px 2px rgba(0, 200, 0, 0.5), 0 0 10px 2px rgba(200, 0, 0, 0.5); }
+               100% { box-shadow: 0 0 15px 3px rgba(0, 200, 0, 0.7), 0 0 15px 3px rgba(200, 0, 0, 0.7); }
+             }
+             &::placeholder {
+               color: #999;
+             }
+             &:focus {
+               outline: none;
+               animation: none;
+
+             }
+           }
+           .inputError{
+             color: red;
+             margin-top: 20px;
+             font-size: 1.15rem;
+             text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+           }
+         }
+
   }
 
   @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding-top: 50px;
   }

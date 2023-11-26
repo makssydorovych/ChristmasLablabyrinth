@@ -11,11 +11,20 @@ const OptionsScreen = () => {
   const dispatch = useDispatch();
   const players = useSelector((state) => state.game.players);
   const navigate = useNavigate();
+  const [inputError, setInputError] = useState("");
+
   const handleAddPlayer = () => {
+    if (playerName.trim().length > 20) {
+      setInputError("Name must be less than 20 characters.");
+      return;
+    }
+
     if (playerName.trim()) {
       dispatch(addPlayer({ name: playerName }));
       setPlayerName("");
+      setInputError("");
     }
+
     if (players.length === 6) {
       alert("Maximum amount of players");
     }
@@ -33,13 +42,19 @@ const OptionsScreen = () => {
     <div className={s.optionsScreen}>
       <Players />
       <div className={s.optionsScreenItems}>
-        <input
-          className={s.optionsScreenInput}
-          type="text"
-          placeholder="Enter player name"
-          value={playerName}
-          onChange={(e) => setPlayerName(e.target.value)}
-        />
+        <div className={s.optionsScreenInputForm}>
+          <input
+            className={s.optionsScreenInput}
+            type="text"
+            placeholder="Enter player name"
+            value={playerName}
+            onChange={(e) => {
+              setPlayerName(e.target.value);
+              if (inputError) setInputError("");
+            }}
+          />
+          {inputError && <div className={s.inputError}>{inputError}</div>}{" "}
+        </div>
         <motion.button
           className={s.optionsScreenButton}
           onClick={handleAddPlayer}
