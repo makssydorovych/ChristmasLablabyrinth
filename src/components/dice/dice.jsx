@@ -4,6 +4,7 @@ import { setDiceValue } from "../../services/game.slice.js";
 import s from "./dice.module.scss";
 import { motion } from "framer-motion";
 import Players from "../players/players.jsx";
+
 const Dice = () => {
   const players = useSelector((state) => state.game.players);
   const diceValue = useSelector((state) => state.game.diceValue);
@@ -16,6 +17,7 @@ const Dice = () => {
       setIsDiceActive(true);
     }
   }, [activePlayer]);
+
   const handleRollDice = () => {
     if (isDiceActive) {
       const newValue = Math.ceil(Math.random() * 6);
