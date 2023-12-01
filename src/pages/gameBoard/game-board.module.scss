@@ -1,0 +1,81 @@
+.gameBoard {
+  background: url("../../assets/images/game-image.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.gameBoardInfo{
+
+
+}
+.gameBoardLabyrinth {
+  width: 100%;
+  margin-top: 3vh;
+  overflow: hidden;
+}
+.gameRow {
+  display: flex;
+  justify-content: center;
+}
+.gameCell {
+  flex: 0 0 auto;
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cbbfbf;
+}
+.finishCell{
+  background: url("../../assets/images/snowflake.svg") no-repeat center center;
+  background-size: cover;
+}
+.wall {
+  background-color: #173a0c;
+
+}
+.snowflake{
+  background: url("../../assets/images/snowflake.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.possibleMove {
+  background-color: #0cc585;
+}
+
+@media (max-width: 1000px) {
+  .gameBoardLabyrinth .gameCell {
+    width: 25px;
+    height: 25px;
+  }
+  @media (max-width: 768px) {
+    .gameBoardLabyrinth .gameCell {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @media (max-width: 605px) {
+    .gameBoardLabyrinth .gameCell {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  @media (max-width: 580px) {
+    .gameBoardLabyrinth .gameCell {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  @media (max-width: 476px) {
+    .gameBoardLabyrinth .gameCell {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+
+.selectedCell {
+  background-color: red;
+}
+
