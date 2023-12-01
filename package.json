@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/dm-serif-text": "^5.0.17",
+    "@fontsource/ultra": "^5.0.17",
     "@reduxjs/toolkit": "^1.9.7",
     "framer-motion": "^10.16.5",
     "install": "^0.13.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",
