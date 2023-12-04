@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addPlayer, updatePlayer } from "../../services/game.slice.js";
+import {
+  addPlayer,
+  setDifficulty,
+  updatePlayer,
+} from "../../services/game.slice.js";
 import Players from "../../components/players/players.jsx";
 import { useNavigate } from "react-router-dom";
 import s from "./options-screen.module.scss";
@@ -8,14 +12,23 @@ import { motion } from "framer-motion";
 
 const OptionsScreen = () => {
   const [playerName, setPlayerName] = useState("");
-  const dispatch = useDispatch();
   const players = useSelector((state) => state.game.players);
   const navigate = useNavigate();
   const [inputError, setInputError] = useState("");
-
+  const dispatch = useDispatch();
+  const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
+  const handleDifficultyChange = (e) => {
+    const newDifficulty = e.target.value;
+    setSelectedDifficulty(newDifficulty);
+    dispatch(setDifficulty(newDifficulty));
+  };
   const handleAddPlayer = () => {
     if (playerName.trim().length > 20) {
       setInputError("Name must be less than 20 characters.");
+      return;
+    }
+    if (playerName.trim().length == 0) {
+      setInputError("Enter player name.");
       return;
     }
 
@@ -30,17 +43,17 @@ const OptionsScreen = () => {
     }
   };
   const handleStartGame = () => {
-    if (players.length > 0) {
+    if (players.length >= 1) {
       dispatch(updatePlayer({ playerIndex: 0, isActive: true }));
       navigate("/game");
     } else {
-      alert("Add players name");
+      setInputError("Enter player name.");
+      return;
     }
   };
 
   return (
     <div className={s.optionsScreen}>
-      <Players />
       <div className={s.optionsScreenItems}>
         <div className={s.optionsScreenInputForm}>
           <input
@@ -69,7 +82,18 @@ const OptionsScreen = () => {
         >
           Start Game
         </motion.button>
+        <div className={s.difficulty}>
+          <select
+            id="difficulty"
+            value={selectedDifficulty}
+            onChange={handleDifficultyChange}
+          >
+            <option value="easy">Easy</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
       </div>
+      <Players />
     </div>
   );
 };
