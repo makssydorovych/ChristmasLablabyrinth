@@ -4,7 +4,7 @@ import { setDiceValue, updatePlayer } from "../../services/game.slice.js";
 import s from "./game-board.module.scss";
 import PlayerToken from "../../components/player/player-token.jsx";
 import Dice from "../../components/dice/dice.jsx";
-import { createLabyrinthGrid } from "./labyrinthGrid.jsx"; // Removed unused import
+import { createLabyrinthGrid } from "./labyrinth/labyrinthGrid.jsx"; // Removed unused import
 import { useNavigate } from "react-router-dom";
 import Modal from "../../components/modal/modal.jsx";
 import { calculatePossibleMoves } from "../../utils/calculatePossibleMoves.js";

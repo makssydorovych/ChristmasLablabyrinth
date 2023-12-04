@@ -1,6 +1,6 @@
-import { moveSnowflake } from "../../utils/move-snowflakes.js";
-import { generateMaze } from "../../utils/generateMaze.js";
-import { placeSnowflakes } from "../../utils/placeSnowFlakes.js";
+import { moveSnowflake } from "../../../utils/move-snowflakes.js";
+import { generateMaze } from "../../../utils/generateMaze.js";
+import { placeSnowflakes } from "../../../utils/placeSnowFlakes.js";
 
 export const createLabyrinthGrid = (difficulty) => {
   const rows = 22;
