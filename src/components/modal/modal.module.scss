@@ -1,0 +1,17 @@
+.congratulationsMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(248, 243, 243, 0.8);
+  color: #0f2c62;
+  padding: 20px;
+  text-align: center;
+  font-size: 3rem;
+  min-height: 30%;
+  min-width: 50%;
+  border-radius: 20px;
+}

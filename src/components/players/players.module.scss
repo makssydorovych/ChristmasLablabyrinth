@@ -1,0 +1,67 @@
+.players{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+padding: 0;
+  .player {
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 3px black;
+    opacity: 0.7;
+    min-width: 150px;
+    @media (max-width: 768px) {
+      min-width: 100px;
+    }
+    @media (max-width: 320px) {
+      min-width: 75px;
+    }
+  }
+  .playerWithSnowFlakes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .player-1 {
+    background-color: var(--color-player-1);
+  }
+  .player-2 {
+    background-color: var(--color-player-2);
+  }
+  .player-3 {
+    background-color: var(--color-player-3);
+  }
+  .player-4 {
+    background-color: var(--color-player-4);
+  }
+  .player-5 {
+    background-color: var(--color-player-5);
+  }
+  .player-6 {
+    background-color: var(--color-player-6);
+  }
+  .active {
+    animation: pulse 1s infinite;
+    opacity: 1;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+}
+

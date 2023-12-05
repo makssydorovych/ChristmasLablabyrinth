@@ -1,9 +1,13 @@
-import React from 'react';
-import './player-token.module.scss';
+import PropTypes from "prop-types";
+import s from "./player-token.module.scss";
 
 const PlayerToken = ({ playerIndex }) => {
-    const tokenClass = `player-token player-${playerIndex + 1}`;
-    return <div className={tokenClass}></div>;
+  const tokenClass = `${s.playerToken} ${s["player-" + (playerIndex + 1)]}`;
+  return <div className={tokenClass}></div>;
+};
+
+PlayerToken.propTypes = {
+  playerIndex: PropTypes.number.isRequired,
 };
 
 export default PlayerToken;
