@@ -2,15 +2,13 @@ export const calculatePossibleMoves = (playerPosition, diceValue, grid) => {
   if (!grid || grid.length === 0 || !grid[0]) {
     return [];
   }
-
   const moves = [];
   const directions = [
-    [1, 0], // down
-    [0, 1], // right
-    [-1, 0], // up
-    [0, -1], // left
+    [1, 0],
+    [0, 1],
+    [-1, 0],
+    [0, -1],
   ];
-
   const queue = [
     {
       row: playerPosition.row,
@@ -18,11 +16,9 @@ export const calculatePossibleMoves = (playerPosition, diceValue, grid) => {
       stepsRemaining: diceValue,
     },
   ];
-
   while (queue.length > 0) {
     const { row, col, stepsRemaining } = queue.shift();
 
-    // Check if the row and col are within the grid bounds
     if (
       row < 0 ||
       row >= grid.length ||
@@ -33,7 +29,6 @@ export const calculatePossibleMoves = (playerPosition, diceValue, grid) => {
       continue; // Skip invalid positions
     }
 
-    // Add the cell to the list of possible moves if it's not a wall
     if (!moves.some((move) => move.row === row && move.col === col)) {
       moves.push({ row, col });
     }
