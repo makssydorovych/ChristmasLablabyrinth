@@ -3,13 +3,13 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  min-height: 100px;
+  min-height: 80px;
   .diceButton {
     border-radius: 50px;
-    padding: 15px 30px;
+    padding: 5px 20px;
     text-align: center;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -24,12 +24,13 @@
   }
   .diceValue {
     background: white;
-    padding: 15px;
-    font-size: 3rem;
+    margin: 5px;
+    padding: 5px;
+    font-size: 2rem;
     font-weight: bold;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,9 +43,9 @@
         font-size: 1rem;
       }
     .diceValue{
-      font-size: 2rem;
-      width: 75px;
-      height: 75px;
+      font-size: 1rem;
+      width: 50px;
+      height: 50px;
     }
   }
   @media (max-width: 500px) {
